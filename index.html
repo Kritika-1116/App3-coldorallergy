@@ -117,9 +117,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<p>Do you have a fever?</p> //added question 2
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> //adding one to the cold count, if yes is chosen
+	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> //adding one to the allergy count, if no is chosen
 	</div>
 </div>	
 
@@ -129,9 +129,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<p>Do you have a sore throat?</p> //added question 3
+	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> //adding one to the cold count, if yes is chosen
+	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> //adding one to the allergy count, if no is chosen
 	</div>
 </div>	
 
@@ -141,18 +141,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>
-	<a href="#five"onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<p>Are your symptoms seasonal or chronic?</p> //added question 4
+	<a href="#five"onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> //adding one to the allergy count, if yes is chosen
+	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a> //adding one to the cold count, if no is chosen
 	</div>
 </div>	
 
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results Page</h1>
+		<h1>Results Page</h1> //created the final results page!
 	</div>
 	
 	<div "content" class="w3-container">
+		/*
+The code below will change the text with the id= "results" code. As well, the next line runs the getResults() function which calculates the proportion for allergy and cold.
+*/
 	<p id= "results">Click here to get your results:</p>
 	<a href="#five" onclick="getResults();"class="w3-btn w3-black"> Results </a>
 	</div>
