@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Kritika Ramesh
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+This code aims to create a diagnostic survey that asks questions on seperate pages to find the proportion for cold and allergy symptoms which is displayed on the final results page.
  
 Known Issues:
-blah, blah, blah, blah
+I don't believe there are issues with the code!
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -50,11 +50,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-//to calculate the results, the below function calculates the percentage and prints out the results on the screen
+//to calculate the results, the below function calculates the proportion and prints out the results on the screen
 	function getResults(){
 
 		var allergyPercent = (allergy_count/4) * 100;
 		var coldPercent = (cold_count/4) * 100;
+//prints allergyPercent and coldPercent on the screen with adding some nice text :)
 		var resultText = document.getElementById("results");
 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; 
 		
@@ -106,7 +107,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are you eyes watery or itchy?</p> <!-- added question 1-->
+        <p>Are you eyes watery or itchy?</p> <!-- added question 1 on page 1 for the first symptom-->
 	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--adding one to the allergy count, if yes is chosen-->
 	<a href="#two" onclick="coldAdd();"class="w3-btn w3-black"> No </a> <!--adding one to the cold count, if no is chosen-->
     	</div>
@@ -114,11 +115,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1> <!-- header for question 2-->
+		<h1>Question 2</h1> <!-- header for question 2 on the second page for the second symptom-->
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p> <!--added question 2-->
+	<p>Do you have a fever?</p> <!--added question 2 on page 2 for the second symptom-->
 	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--adding one to the cold count, if yes is chosen-->
 	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> <!--adding one to the allergy count, if no is chosen-->
 	</div>
@@ -126,7 +127,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1> <!-- header for question 3-->
+		<h1>Question 3</h1> <!-- header for question 3 on the third page for the third symptom-->
 	</div>
 	
 	<div id="content" class="w3-container">
@@ -138,7 +139,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1> <!-- header for question 4-->
+		<h1>Question 4</h1> <!-- header for question 4 on the fourth page for the fourth symptom-->
 	</div>
 	
 	<div id="content" class="w3-container">
@@ -150,7 +151,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results Page</h1> <!--created the final results page!-->
+		<h1>Results Page</h1> <!--created the final results page! this displays the proportion for cold and allergy symptoms-->
 	</div>
 	
 	<div "content" class="w3-container">
